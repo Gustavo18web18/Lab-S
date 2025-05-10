@@ -1,126 +1,91 @@
-/* 1) Importa fonte do Google */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* 2) Variáveis de cor */
-:root {
-  --primary-color: #4a90e2;
-  --secondary-color: #50e3c2;
-  --text-color: #333333;
-  --bg-color: #f7faff;
-}
-
-/* 3) Reset básico */
+/* 1) Reset básico e corpo */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* 4) Corpo da página */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-}
-
-/* 5) Menu de navegação */
-nav.menu {
-  width: 100%;
-  background: var(--primary-color);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-nav.menu ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-}
-nav.menu a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 1rem;
-  position: relative;
-  transition: color .3s;
-}
-nav.menu a::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transition: width .3s;
-}
-nav.menu a:hover,
-nav.menu a:focus {
-  color: var(--secondary-color);
-}
-nav.menu a:hover::after,
-nav.menu a:focus::after {
-  width: 100%;
-}
-
-/* 6) Título principal */
-h1#main-title {
-  font-size: 2.5rem;
-  margin: 2rem 0;
-  letter-spacing: 1px;
-  text-align: center;
-  color: var(--primary-color);
-}
-
-/* 7) Parágrafos (só na index) */
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 800px;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* 8) Tabela de projetos */
-#project-table {
-  width: 100%;
-  max-width: 800px;
-  border-collapse: collapse;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-#project-table th,
-#project-table td {
-  padding: 1rem;
-  text-align: left;
-}
-#project-table th {
-  background: var(--primary-color);
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-#project-table tr:nth-child(even) {
-  background: #eef5ff;
-}
-#project-table tr:hover {
-  background: #dce9ff;
-}
-#project-table td a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color .3s;
-}
-#project-table td a:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;   /* fundo clarinho */
+    color: #333;
+    line-height: 1.5;
+    padding: 20px;
+  }
+  
+  /* 2) Menu de navegação */
+  nav.menu {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  nav.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav.menu li {
+    margin: 0 15px;
+  }
+  
+  nav.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 0;
+    display: inline-block;
+    transition: color 0.2s;
+  }
+  
+  nav.menu a:hover {
+    color: #0066cc;  /* muda a cor ao passar o mouse */
+  }
+  
+  /* 3) Título principal */
+  h1#main-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  /* 4) Tabela de projetos */
+  #project-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  #project-table th,
+  #project-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  
+  #project-table th {
+    background-color: #e2e8f0;  /* cinza suave */
+  }
+  
+  #project-table tr:nth-child(even) {
+    background-color: #f7fafc;  /* linha clara alternada */
+  }
+  
+  #project-table tr:hover {
+    background-color: #d0e2f2;  /* destaque ao passar o mouse */
+  }
+  
+  /* 5) Links dentro da tabela */
+  #project-table a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  #project-table a:hover {
+    text-decoration: underline;
+  }
+  
