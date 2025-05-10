@@ -1,110 +1,126 @@
-h1{
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: center;
-    font-size: 2em;
-    color: black;
+/* 1) Importa fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* 2) Variáveis de cor */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #50e3c2;
+  --text-color: #333333;
+  --bg-color: #f7faff;
 }
 
+/* 3) Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4) Corpo da página */
 body {
-   font-family: Arial, sans-serif;
-   background-color: #f4f4f4;
-   text-align: center;
-   padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-header h1 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
+/* 5) Menu de navegação */
+nav.menu {
+  width: 100%;
+  background: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+nav.menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+nav.menu a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1rem;
+  position: relative;
+  transition: color .3s;
+}
+nav.menu a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+}
+nav.menu a:hover,
+nav.menu a:focus {
+  color: var(--secondary-color);
+}
+nav.menu a:hover::after,
+nav.menu a:focus::after {
+  width: 100%;
 }
 
-nav ul {
-    list-style:none;
-    padding: 0;
-    margin: 20px;
+/* 6) Título principal */
+h1#main-title {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--primary-color);
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 15px;
+/* 7) Parágrafos (só na index) */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-nav ul li a {
-     text-decoration: none;
-     color: #007BFF;
-     font-size: 1.2em;
+/* 8) Tabela de projetos */
+#project-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
 }
-
-nav ul li a:hover {
-    text-decoration: underline;
+#project-table th,
+#project-table td {
+  padding: 1rem;
+  text-align: left;
 }
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    gap: 40px;
-    margin-top: 30px;
+#project-table th {
+  background: var(--primary-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
 }
-
-.coluna{
-    width: 30%;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s;
+#project-table tr:nth-child(even) {
+  background: #eef5ff;
 }
-
-.coluna:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+#project-table tr:hover {
+  background: #dce9ff;
 }
-
-h2 {
-    margin-bottom: 15px;
-    color: #444;
+#project-table td a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .3s;
 }
-
-.conteudo {
-    display: none;
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.5;
-}
-
-.check:checked + .conteudo {
-    display: block;
-}
-
-table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th,td {
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f4f4f4;
-}
-
-footer {
-    margin-top: 50px;
-    font-size: 0.9em;
-    color: #888;
-    position: fixed;
-}
-
-.check {
-    display: none;
+#project-table td a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }

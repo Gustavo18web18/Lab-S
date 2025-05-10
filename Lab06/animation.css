@@ -1,0 +1,17 @@
+/* Define cor de fundo e remove margens */
+body {
+    background-color: #eef;        /* escolha a cor que quiser */
+    margin: 0;
+    height: 100vh;                 /* para centralizar verticalmente */
+    display: flex;
+    flex-direction: column;        /* alinha h1 acima do canvas */
+    align-items: center;           /* centraliza horizontal */
+    justify-content: center;       /* centraliza vertical */
+    font-family: sans-serif;
+  }
+  
+  /* Dá uma leve borda ao canvas (opcional) */
+  #animationCanvas {
+    border: 2px solid #333;
+  }
+  
