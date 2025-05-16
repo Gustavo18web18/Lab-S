@@ -1,6 +1,6 @@
-// guess.js
 
-// Gerar um número aleatório entre 0 e 99
+
+
 let randomNumber = Math.floor(Math.random() * 100);
 
 // Função para verificar a adivinhação

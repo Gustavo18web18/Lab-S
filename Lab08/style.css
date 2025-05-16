@@ -1,4 +1,4 @@
-/* fundo e centralização */
+
 body {
     background-color: #f0f4f8;
     display: flex;
@@ -9,7 +9,7 @@ body {
     margin: 0;
   }
   
-  /* container do formulário */
+ 
   .form-container {
     background: #fff;
     padding: 20px;

@@ -6,7 +6,7 @@ const db = require("./database");
 const app = express();
 const PORT = 80;
 
-// Configurações
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");

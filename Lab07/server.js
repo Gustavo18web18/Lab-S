@@ -1,18 +1,16 @@
-// 1) Inclui módulos necessários
-var http     = require('http');      
-var express  = require('express');
+var http = require('http');
+var express = require('express');
+var colors = require('colors');
+var bodyParser = require('body-parser');
 
-// 2) Cria a aplicação Express
-var app      = express();
-
-// 3) Define onde estão seus arquivos estáticos (HTML, CSS, JS, imagens)
+var app = express();
 app.use(express.static('./public'));
+app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.json())
+app.set('view engine', 'ejs')
+app.set('views', './views');
 
-// 4) Cria o servidor HTTP “embrulhando” o Express
-var server   = http.createServer(app);
+var server = http.createServer(app);
+server.listen(100);
 
-// 5) Diz em qual porta o servidor vai “ouvir” requisições  
-server.listen(3000);
-
-// 6) Mensagem de debug para confirmar que está rodando
-console.log("Servidor rodando na porta 3000...");
+console.log('Servidor rodando ...'.rainbow);
