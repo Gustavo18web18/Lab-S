@@ -41,7 +41,7 @@ app.post('/cadastra', (req, res) => {
     res.render('resposta', { status: 'Usuário já cadastrado!' });
   } else {
     usuarios.push({ username, password });
-    res.render('resposta', { status: 'Usuário cadastrado com sucesso!' });
+    res.render('resposta', { status: 'Usuário cadastrado com sucesso!',username });
   }
 });
 
